@@ -1,0 +1,32 @@
+﻿@page
+@model CarBazarWebApp.Pages.Reviews.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 class="text-center font1">All Reviews</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-dark">Add New Review For Model</a>
+</p>
+<hr />
+<div class="row">
+    @foreach (var item in Model.Review)
+    {
+        <div class="col-6">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        @Html.DisplayFor(modelItem => item.Model.ModelName)
+                    </h4>
+                    <p>@Html.DisplayFor(modelItem => item.ReviewText)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Rating) Star Rating</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-page="./Edit" class="btn btn-secondary mr-2" asp-route-id="@item.Id">Edit</a>
+                    <a asp-page="./Delete" class="btn btn-warning" asp-route-id="@item.Id">Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

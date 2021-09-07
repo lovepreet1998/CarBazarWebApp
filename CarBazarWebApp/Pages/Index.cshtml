@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 font1">Welcome to Car Bazar</h1>
+</div>
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <div class="card w-100">
+            <center>
+                <img src="~/images/common.png" class="img-fluid">
+            </center>
+            <div class="card-body">
+                <a class="btn btn-dark btn-block" asp-page="/Companies/Index">All Companies</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="card w-100">
+            <center>
+                <img src="~/images/common.png" class="img-fluid">
+            </center>
+            <div class="card-body">
+                <a class="btn btn-dark btn-block" asp-page="/Models/Index">All Models</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="card w-100">
+            <center>
+                <img src="~/images/common.png" class="img-fluid">
+            </center>
+            <div class="card-body">
+                <a class="btn btn-dark btn-block" asp-page="/Cars/Index">All Cars</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="card w-100">
+            <center>
+                <img src="~/images/common.png" class="img-fluid">
+            </center>
+            <div class="card-body">
+                <a class="btn btn-dark btn-block" asp-page="/Reviews/Index">All Reviews</a>
+            </div>
+        </div>
+
+    </div>
+</div>
